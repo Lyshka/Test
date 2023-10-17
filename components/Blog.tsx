@@ -20,7 +20,7 @@ const Blog = () => {
     ];
 
     return toMatch.some((toMatchItem) => {
-      return navigator.userAgent.match(toMatchItem);
+      return window.navigator.userAgent.match(toMatchItem);
     });
   }
 
