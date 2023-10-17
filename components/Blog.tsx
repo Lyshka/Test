@@ -20,7 +20,7 @@ const Blog = () => {
     ];
 
     return toMatch.some((toMatchItem) => {
-      return window.navigator.userAgent.match(toMatchItem);
+      return window && window.navigator.userAgent.match(toMatchItem);
     });
   }
 
@@ -39,7 +39,10 @@ const Blog = () => {
 
         <div className="lg:w-2 w-1 lg:h-[403px] h-[301px] bg-white/[12%] rounded relative top-1/2 -translate-y-1/2 mr-2">
           <div
-            style={{ height: 403/ 5, top: scroll * (detectMob() ? 2.13 : 1.32) }}
+            style={{
+              height: 403 / 5,
+              top: scroll * (detectMob() ? 2.13 : 1.32),
+            }}
             className={`w-full bg-[#478BF9] rounded-[10px] absolute`}
           >
             &nbsp;
