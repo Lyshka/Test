@@ -6,7 +6,7 @@ import { ScrollContext } from "@/context/ScrollContext";
 import Link from "next/link";
 
 const Scroll = forwardRef(() => {
-  const { scrollRef, setScroll } = useContext(ScrollContext);
+  const { scrollRef, setScroll } = useContext<any>(ScrollContext);
 
   const onScrollCustom = () => {
     setScroll(scrollRef.current.scrollTop);

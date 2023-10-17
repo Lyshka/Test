@@ -6,7 +6,7 @@ import { ScrollContext } from "@/context/ScrollContext";
 import Scroll from "./Scroll";
 
 const Blog = () => {
-  const { scroll } = useContext(ScrollContext);
+  const { scroll } = useContext<any>(ScrollContext);
 
   function detectMob() {
     const toMatch = [
